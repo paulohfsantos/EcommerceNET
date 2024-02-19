@@ -4,9 +4,7 @@ namespace EcommerceNet.Domain.Interfaces
 {
     public interface IUserRepository
     {
-        User GetUserById(int id);
-        User GetUserByUsername(string username);
-        User GetUserByEmail(string email);
+        User GetProfile(int id);
         Task<User> UpdateUser(User user);
         Task<User> DeactivateUser(int userId); // deactivate user: set IsActive to false
     }
