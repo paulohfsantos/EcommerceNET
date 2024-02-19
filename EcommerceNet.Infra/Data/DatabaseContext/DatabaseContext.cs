@@ -13,5 +13,14 @@ namespace EcommerceNet.Infra.Data.DatabaseContext
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.Category.Id)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }
