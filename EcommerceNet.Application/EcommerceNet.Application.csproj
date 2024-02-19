@@ -13,13 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\CustomerServices\" />
+    <Folder Include="Services\UsersServices\" />
   </ItemGroup>
 
-	<ItemGroup>
-		
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ecommerce.Domain\Ecommerce.Domain.csproj" />
+  </ItemGroup>
 
 </Project>
