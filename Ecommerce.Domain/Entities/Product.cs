@@ -10,6 +10,9 @@ namespace EcommerceNet.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [ForeignKey("UserId")]
+        public User User { get; set; }
+
         [Required]
         [StringLength(50)]
         public string Name { get; set; }

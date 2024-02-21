@@ -9,6 +9,6 @@ namespace EcommerceNet.Domain.Interfaces
         Task<IEnumerable<Category>> GetCategories();
         Task<Category> CreateCategory(Category category);
         Task<Category> UpdateCategory(Category category);
-        Task<Category> DeleteCategory(int categoryId); // should we delete all products in this category?
+        Task<Category> DeleteCategory(int categoryId); // instead of deleting all products, we just remove category from products
     }
 }
